@@ -300,7 +300,7 @@ v2ray_conf_add(){
     judge "config.json 配置变更"
     modify_port_UUID ${client_conf}
     judge "client.json 配置变更"
-    json_addr=`curl --upload-file ${client_conf} https://transfer.sh/wulabing_${camouflage}_${UUID}.json`
+    json_addr=`curl -F"file=@${client_conf}" https://0x0.st`
 }
 
 vmess_qr_config(){
